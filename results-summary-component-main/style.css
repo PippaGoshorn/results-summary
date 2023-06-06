@@ -1,0 +1,250 @@
+/* * {
+    border: 1px solid orange;
+} */
+
+body {
+    width: 375px;
+    /* font-family: "Hanken Grotesque"; */
+}
+
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+} 
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(hsla(252, 100%, 67%, 100%), hsla(241, 81%, 54%, 100%));
+    color: hsl(0, 0%, 100%);
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.header-container .h2 {
+    color: hsla(0, 0%, 100% 80%);
+}
+
+.main-score-container {
+    background-image: linear-gradient(rgb(72, 41, 198), hsla(241, 81%, 54%, 20%));
+    text-align: center; 
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 3%;
+} 
+
+.main-score-container .main-score {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.main-score-container .out-of {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: hsla(252, 100%, 75%, 100%);
+}
+
+/* p too far below h2 - HOW TO CLOSE UP? */
+.result-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 70%;
+    color: rgb(212, 203, 247);
+}
+
+.result-text h1 {
+    color: white;
+}
+
+.summary-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    background-color: hsl(0, 0%, 100%);
+    width: 80%;
+    padding-top: 2%;
+}
+
+.summary-container h2 {
+    display: flex;
+    align-self: flex-start;
+}
+
+/* HOW TO GET 'REACTION' ETC FURTHER TO LEFT? - FLEX-GROW? */
+.reaction {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    border-radius: 15px;
+    background-color: hsla(0, 100%, 67%, 15%);
+    margin: 3%;
+    font-weight: 700;
+}
+
+.reaction p {
+    color: hsla(0, 100%, 67%, 100%);
+}
+
+.memory {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    border-radius: 15px;
+    background-color: hsla(39, 100%, 56%, 15%);
+    margin: 3%;
+    font-weight: 700;
+}
+
+.memory p {
+    color: hsla(39, 100%, 56%, 100%);
+}
+
+.verbal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    background-color: hsla(166, 100%, 37%, 15%);
+    border-radius: 15px;
+    margin: 3%;
+    font-weight: 700;
+}
+
+.verbal p {
+    color: hsla(166, 100%, 37%, 100%);
+}
+
+.visual {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    background-color: hsla(234, 85%, 45%, 15%);
+    border-radius: 15px;
+    margin: 3%;
+    font-weight: 700;
+}
+
+.visual p {
+    color: hsla(234, 85%, 45%, 100%);
+}
+
+.reaction .score {
+    color: black;
+}
+
+.reaction span {
+    color: grey;
+}
+
+.memory .score {
+    color: black;
+}
+
+.memory span {
+    color: grey;
+}
+
+.verbal .score {
+    color: black;
+}
+
+.verbal span {
+    color: grey;
+}
+
+.visual .score {
+    color: black;
+}
+
+.visual span {
+    color: grey;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.continue-button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 3%;
+}
+
+.continue {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    background-color: hsl(224, 30%, 27%);
+    color: hsl(0, 0%, 100%);
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.continue:hover {
+    background-image: linear-gradient(hsla(252, 100%, 67%, 100%), hsla(241, 81%, 54%, 100%));
+    border: none;
+    cursor: pointer;
+}   
+
+.continue:active {
+    background-image: linear-gradient(hsla(252, 100%, 67%, 100%), hsla(241, 81%, 54%, 100%));
+    border: none;
+}   
+
+.attribution {
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 11px;
+    margin: 3%;
+}
+
+/* NOT ABLE TO GET MEDIA QUERY TO WORK FOR DESKTOP LAYOUT */
+@media screen only and (min-width: 1440) {
+    .outer-container {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 500px 500px;
+    grid-gap: 5px;
+}}
+
+@media screen only and (min-width: 1440) {
+    .outer-container .header-container {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}}
+
+@media screen only and (min-width: 1440) {
+    .outer-container .summary-container {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}}
