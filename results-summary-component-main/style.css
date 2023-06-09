@@ -1,6 +1,6 @@
-/* * {
+* {
     border: 1px solid orange;
-} */
+}
 
 body {
     width: 375px;
@@ -81,7 +81,7 @@ body {
     align-self: flex-start;
 }
 
-/* HOW TO GET 'REACTION' ETC FURTHER TO LEFT? - FLEX-GROW? */
+/* PADDING IS MAKING RED BOX WIDER */
 .reaction {
     display: flex;
     flex-direction: row;
@@ -92,6 +92,18 @@ body {
     margin: 3%;
     font-weight: 700;
 }
+
+.reaction-lockup {
+    display: flex;
+}
+
+.reaction-lockup p {
+    margin-left: 10px;
+}
+
+/* .score-detail {
+    display: flex;
+} */
 
 .reaction p {
     color: hsla(0, 100%, 67%, 100%);
@@ -224,8 +236,10 @@ button {
     margin: 3%;
 }
 
+.attribution a { color: hsl(228, 45%, 44%);
+
 /* NOT ABLE TO GET MEDIA QUERY TO WORK FOR DESKTOP LAYOUT */
-@media screen only and (min-width: 1440) {
+@media screen only and (min-width: 1440px) {
     .outer-container {
     display: grid;
     grid-template-columns: 300px 300px;
@@ -233,7 +247,7 @@ button {
     grid-gap: 5px;
 }}
 
-@media screen only and (min-width: 1440) {
+@media screen only and (min-width: 1440px) {
     .outer-container .header-container {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -241,7 +255,7 @@ button {
     grid-row-end: 2;
 }}
 
-@media screen only and (min-width: 1440) {
+@media screen only and (min-width: 1440px) {
     .outer-container .summary-container {
     grid-column-start: 2;
     grid-column-end: 3;
